@@ -30,7 +30,7 @@ const App = () => {
 
   return (
     <div className="App">
-      <h1>Backend로부터 받은 메시지</h1>
+      <h1>Backend로부터 받은 메시지입니다</h1>
       <p>{message}</p>
     </div>
   )
