@@ -13,7 +13,7 @@ const SwimContainer = ({swim}) => {
       {!descriptExpanded ? (
         <>
           <img
-            src={`/images/${swim.name}.jpg`}
+            src={swim.url}
             alt={`수영 이미지 ${swim.name}`}
           />
           <div className="swim-name">{swim.name}</div>

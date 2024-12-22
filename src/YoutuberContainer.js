@@ -5,7 +5,7 @@ const YoutuberContainer = ({youtuber}) => {
             href={`https://www.youtube.com/${youtuber.youtuberId}`}
             target="_blank" rel='noreferrer'>
             <img 
-            src={`/images/${youtuber.name}.jpg`} 
+            src={youtuber.url} 
             alt={`프로필 이미지 ${youtuber.name}`}
             />
             <div className="youtuber-name">
