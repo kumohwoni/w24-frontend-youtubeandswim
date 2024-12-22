@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { FaStar } from 'react-icons/fa';
 
-const SwimContainer = (props) => {
+const SwimContainer = ({swim}) => {
   const [descriptExpanded, setDescriptExpanded] = useState(false);
 
   const toggleDescript = () => {
@@ -13,12 +13,12 @@ const SwimContainer = (props) => {
       {!descriptExpanded ? (
         <>
           <img
-            src={`/images/${props.swim.name}.jpg`}
-            alt={`수영 이미지 ${props.swim.name}`}
+            src={`/images/${swim.name}.jpg`}
+            alt={`수영 이미지 ${swim.name}`}
           />
-          <div className="swim-name">{props.swim.name}</div>
+          <div className="swim-name">{swim.name}</div>
           <div className="swim-level">
-            {[...Array(props.swim.level)].map((_, index) => (
+            {[...Array(swim.level)].map((_, index) => (
               <FaStar key={index} />
             ))}
           </div>
@@ -26,7 +26,7 @@ const SwimContainer = (props) => {
       )
       :
       (
-        <pre className="swim-descript">{props.swim.descript}</pre>
+        <pre className="swim-descript">{swim.descript}</pre>
       )}
     </div>
   );
