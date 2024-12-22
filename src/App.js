@@ -5,7 +5,7 @@ import YoutuberContainer from './YoutuberContainer.js'
 import SwimContainer from './SwimContainer.js'
 import axios from 'axios'
 
-const SERVER_URL = 'http://localhost:8080/api/youtuberswim'
+const SERVER_URL = process.env.REACT_APP_API_URL || 'https://w241213wbackendyoutubeandswim.onrender.com';
 
 const App = () => {
   const [ youtubers, setYoutubers ] = useState([])
