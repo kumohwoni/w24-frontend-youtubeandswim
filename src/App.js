@@ -60,7 +60,7 @@ const App = () => {
 
 const Header = () => {
   return (
-      <h1>HW03 취미 데이터 서버 개발 20230490 박채원</h1>
+      <h1>HW03 Youtuber & Swim 20230490 박채원</h1>
   )
 }
 
