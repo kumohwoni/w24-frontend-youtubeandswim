@@ -1,38 +1,193 @@
-.App {
-  text-align: center;
-}
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&family=Poppins:wght@300;600&display=swap');
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+body {
+  margin: 0;
+  font-family: 'Noto Sans', sans-serif;
+  background: linear-gradient(135deg, #93d8f3, #ffcde6);
+  color: #1a2b3c;
   min-height: 100vh;
+  line-height: 1.6;
+  background-attachment: fixed;
+  transition: all 0.4s ease-in-out;
+  font-size: 1rem;
+}
+
+a {
+  text-decoration: none;
+}
+
+
+h1 {
+  text-align: center;
+  margin: 1.875rem 0;
+  padding: 1.5625rem;
+  background: rgba(255, 255, 255, 0.96);
+  font-size: 2.5rem;
+  font-weight: 700;
+  border-radius: 1rem;
+  box-shadow: 0 0.625rem 1.5625rem rgba(0, 0, 0, 0.08);
+  letter-spacing: -0.0625rem;
+  color: #1a2b3c;
+  backdrop-filter: blur(0.625rem);
+  border: 0.0625rem solid rgba(255, 255, 255, 0.18);
+}
+
+h2 {
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: #1a2b3c;
+  position: relative;
+}
+
+h2::after {
+  content: '';
+  position: absolute;
+  bottom: -0.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50px;
+  height: 3px;
+  background: linear-gradient(to right, #93d8f3, #ffcde6);
+}
+
+.hobby-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: center;
+  gap: 3.125rem;
+  padding: 1.25rem;
+  max-width: 87.5rem;
+  margin: 0 auto;
+}
+
+.hobby-box {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  background: rgba(255, 255, 255, 0.96);
+  border-radius: 1.5rem;
+  padding: 2.1875rem;
+  box-shadow: 0 0.625rem 1.5625rem rgba(0, 0, 0, 0.08);
+  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+  backdrop-filter: blur(0.9375rem);
+  border: 0.0625rem solid rgba(255, 255, 255, 0.15);
 }
 
-.App-link {
-  color: #61dafb;
+.hobby-box:hover {
+  transform: translateY(-0.625rem);
+  box-shadow: 0 0.9375rem 2.1875rem rgba(0, 0, 0, 0.12);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.swim-container,
+.youtuber-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(15.625rem, 1fr));
+  gap: 2.1875rem;
+  width: 100%;
+}
+
+.swim-item,
+.youtuber-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.96);
+  border-radius: 1.25rem;
+  padding: 1.5625rem;
+  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+  box-shadow: 0 0.625rem 1.5625rem rgba(0, 0, 0, 0.08);
+  cursor: pointer;
+  border: 0.0625rem solid rgba(255, 255, 255, 0.1);
+  width: 15.625rem;
+  height: 18.75rem;
+}
+
+.swim-item:hover,
+.youtuber-item:hover {
+  transform: scale(1.035) translateY(-0.5rem);
+  box-shadow: 0 0.9375rem 2.1875rem rgba(0, 0, 0, 0.12);
+}
+
+.swim-item img,
+.youtuber-item img {
+  width: 8.75rem;
+  height: 8.75rem;
+  border-radius: 50%;
+  object-fit: cover;
+  transition: all 0.4s ease;
+  border: 0.1875rem solid #93d8f3;
+}
+
+.swim-item img:hover,
+.youtuber-item img:hover {
+  transform: scale(1.1) rotate(3deg);
+  box-shadow: 0 0.625rem 1.25rem rgba(0, 0, 0, 0.15);
+}
+
+.swim-name,
+.youtuber-name {
+  margin-top: 0.9375rem;
+  font-weight: 600;
+  font-size: 1.3em;
+  color: #1a2b3c;
+  letter-spacing: -0.03125rem;
+}
+
+.swim-level {
+  margin-top: 0.625rem;
+  font-size: 1.2em;
+  color: #ffd700;
+  display: flex;
+  align-items: center;
+  gap: 0.3125rem;
+}
+
+.youtuber-descript {
+  font-family: 'Noto Sans', sans-serif;
+  font-size: 0.95em;
+  color: #4a5568;
+  line-height: 1.7;
+  margin-top: 0.9375rem;
+  background: #f4f6f9;
+  border-radius: 1rem;
+  padding: 0.9375rem;
+  box-shadow: inset 0 0.3125rem 0.9375rem rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.swim-descript {
+  font-family: 'Noto Sans', sans-serif;
+  font-size: 0.9em;
+  color: #4a5568;
+  line-height: 1.6;
+  text-align: justify;
+  padding: 0.9375rem;
+  background: #f4f6f9;
+  border-radius: 1rem;
+  border: 0.0625rem solid rgba(0, 0, 0, 0.05);
+  width: 100%;
+  height: auto;
+  overflow-wrap: break-word;
+  white-space: normal;
+  box-shadow: 0 0.625rem 1.5625rem rgba(0, 0, 0, 0.08);
+}
+
+@media (max-width: 64rem) {
+  .hobby-container {
+    grid-template-columns: 1fr;
   }
-  to {
-    transform: rotate(360deg);
+}
+
+@media (max-width: 48rem) {
+  h1 {
+    font-size: 2rem;
+    padding: 0.9375rem;
+  }
+
+  .swim-container,
+  .youtuber-container {
+    grid-template-columns: 1fr;
   }
 }
