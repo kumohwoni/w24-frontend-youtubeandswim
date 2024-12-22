@@ -14,7 +14,7 @@ const App = () => {
 
   const getYoutubers = async () => {
     try {
-      const res = await axios.get(SERVER_URL)
+      const res = await axios.get(`${SERVER_URL}/youtubers`)
       console.log(res)
 
       setYoutubers(res.data)
@@ -27,7 +27,7 @@ const App = () => {
 
   const getSwimmings = async () => {
     try {
-      const res = await axios.get(SERVER_URL)
+      const res = await axios.get(`${SERVER_URL}/swimmings`)
       console.log(res)
 
       setSwimmings(res.data)
